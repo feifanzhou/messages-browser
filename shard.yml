@@ -1,0 +1,17 @@
+name: messages_browser
+version: 0.1.0
+
+authors:
+  - Feifan Zhou <feifan@me.com>
+
+targets:
+  messages_browser:
+    main: src/messages_browser.cr
+
+crystal: 0.24.1
+
+license: MIT
+
+dependencies:
+  sqlite3:
+    github: crystal-lang/crystal-sqlite3
