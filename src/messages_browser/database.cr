@@ -16,6 +16,11 @@ class Database
     ORM::Chats.new(db, query).objects
   end
 
+  def chat_messages(chat_row_id)
+    query = Queries::ChatMessages.new
+    ORM::Messages.new(db, query).objects(chat_row_id)
+  end
+
   def finalize
     db_cleanup
   end
