@@ -4,3 +4,5 @@ require "./messages_browser/*"
 module MessagesBrowser
   # TODO: Put your code here
 end
+
+p Database.new.all_chats
