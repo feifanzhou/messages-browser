@@ -25,7 +25,7 @@
       <small class="message-timestamp <%= big_gap ? "visible" : "" %>">
         <%= msg_time.to_s("%R") %>
       </small>
-      <div class="message-text"><%= message.text %></div>
+      <div class="message-text"><%= HTML.escape(message.text) %></div>
     </div>
     <% last_time = msg_time %>
   <% end %>
