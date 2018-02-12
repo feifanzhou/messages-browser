@@ -1,0 +1,16 @@
+<div class="chats">
+  <ol class="chats-list">
+    <% chats.each do |chat| %>
+      <li>
+        <a href="/chat/<%= chat.row_id %>"><%= chat.id %></a>
+      </li>
+    <% end %>
+  </ol>
+</div>
+<div class="messages">
+  <% messages.each do |message| %>
+    <p class="message">
+      <%= message.text %>
+    </p>
+  <% end %>
+</div>

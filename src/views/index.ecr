@@ -1,0 +1,14 @@
+<div class="chats">
+  <ol class="chats-list">
+    <% chats.each do |chat| %>
+      <li>
+        <a href="/chat/<%= chat.row_id %>"><%= chat.id %></a>
+      </li>
+    <% end %>
+  </ol>
+</div>
+<div class="messages">
+  <p class="empty-prompt">
+    Select a chat to see messages
+  </p>
+</div>
