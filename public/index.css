@@ -25,16 +25,33 @@ html, body, .container {
   border-right: 1px solid #eee;
   list-style: none;
   margin: 0;
-  padding: 0 1em;
+  padding: 0;
 }
 
 .chats-list li {
   overflow: hidden;
+  padding: 0 1em;
+  transition: background 0.1s;
+}
+
+.chats-list li:hover {
+  background: #f0f0f0;
+}
+
+.chats-list li.active {
+  background: #38a3f7;
+}
+
+.chats-list li.active a {
+  color: white;
 }
 
 .chats-list a {
+  color: #666;
   display: inline-block;
   padding: 0.4em 0;
+  text-decoration: none;
+  width: 100%;
 }
 
 .messages {

@@ -1,7 +1,7 @@
 <div class="chats">
   <ol class="chats-list">
     <% chats.each do |chat| %>
-      <li>
+      <li class="<%= chat.row_id == chat_id ? "active" : "" %>">
         <a href="/chat/<%= chat.row_id %>"><%= chat.id %></a>
       </li>
     <% end %>
