@@ -8,9 +8,25 @@
   </ol>
 </div>
 <div class="messages">
+  <% last_time = Time.epoch(0) %>
   <% messages.each do |message| %>
-    <p class="message">
-      <%= message.text %>
-    </p>
+    <% msg_time = message.local_time %>
+    <% day_gap = msg_time.day != last_time.day %>
+    <% if day_gap %>
+    <div class="message-dayGap">
+      <span class="message-dayGap--date">
+        <%= msg_time.to_s("%A, %B %-d") %>
+      </span>
+    </div>
+    <% end %>
+
+    <div class="message">
+      <% big_gap = day_gap || (msg_time - last_time).minutes > 30 %>
+      <small class="message-timestamp <%= big_gap ? "visible" : "" %>">
+        <%= msg_time.to_s("%R") %>
+      </small>
+      <div class="message-text"><%= message.text %></div>
+    </div>
+    <% last_time = msg_time %>
   <% end %>
 </div>

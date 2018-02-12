@@ -6,4 +6,8 @@ struct Message
 
   def initialize(@row_id, @text, @time, @sender)
   end
+
+  def local_time
+    time.to_local
+  end
 end
