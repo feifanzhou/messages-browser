@@ -20,7 +20,7 @@
     </div>
     <% end %>
 
-    <div class="message">
+    <div class="message <%= message.mine? ? "mine" : "" %>">
       <% big_gap = day_gap || (msg_time - last_time).minutes > 30 %>
       <small class="message-timestamp <%= big_gap ? "visible" : "" %>">
         <%= msg_time.to_s("%R") %>

@@ -55,6 +55,9 @@ html, body, .container {
   padding: 0.3rem 0;
   transition: background 0.1s;
 }
+.message.mine {
+  color: #38a3f7;
+}
 
 .message:hover {
   background-color: #eee;

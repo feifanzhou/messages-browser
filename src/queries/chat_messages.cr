@@ -15,6 +15,7 @@ module Queries
         text:      String,
         handle_id: String,
         date:      Int64,
+        from_me:   Bool,
       }
     end
 
@@ -24,6 +25,7 @@ module Queries
         M.text
         H.id
         M.date
+        M.is_from_me
       ]
     end
 

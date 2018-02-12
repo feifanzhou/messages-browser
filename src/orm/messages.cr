@@ -15,11 +15,13 @@ module ORM
           text = row[:text]
           user_id = row[:handle_id]
           timestamp = row[:date]
+          from_me = row[:from_me]
           messages << Message.new(
             row_id,
             text,
             Time.from_mac_nanoseconds(timestamp),
-            User.new(user_id)
+            User.new(user_id),
+            from_me
           )
         end
         messages
