@@ -1,5 +1,6 @@
 require "kemal"
 require "./*"
+require "./presenters/*"
 
 print "Starting…\n"
 print "Opening database…\r"

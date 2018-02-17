@@ -11,4 +11,8 @@ struct Chat
   def add_participant(user)
     participants << user
   end
+
+  def display_name
+    participants.map(&.display_name).join(", ")
+  end
 end

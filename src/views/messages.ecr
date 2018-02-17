@@ -2,7 +2,7 @@
   <ol class="chats-list">
     <% chats.each do |chat| %>
       <li class="<%= chat.row_id == chat_id ? "active" : "" %>">
-        <a href="/chat/<%= chat.row_id %>"><%= chat.id %></a>
+        <a href="/chat/<%= chat.row_id %>"><%= chat.display_name %></a>
       </li>
     <% end %>
   </ol>
@@ -22,10 +22,15 @@
 
     <div class="message <%= message.mine? ? "mine" : "" %>">
       <% big_gap = day_gap || (msg_time - last_time).minutes > 30 %>
-      <small class="message-timestamp <%= big_gap ? "visible" : "" %>">
+      <small
+        class="message-timestamp <%= big_gap ? "visible" : "" %>"
+        title="<%= msg_time.to_s("%a, %b %-d %Y %T") %>"
+      >
         <%= msg_time.to_s("%R") %>
       </small>
-      <div class="message-text"><%= HTML.escape(message.text) %></div>
+      <div class="message-text">
+        <%= MessagePresenter.new(message).display_html %>
+      </div>
     </div>
     <% last_time = msg_time %>
   <% end %>

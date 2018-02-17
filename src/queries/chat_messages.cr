@@ -4,6 +4,8 @@ module Queries
     #   M => message
     #   CMJ => chat_message_join
     #   H => handle
+    #   MAJ => message_attachment_join
+    #   A => attachment
 
     def sql
       "#{select_clause} #{from_clause} #{order_by_clause};"
@@ -16,6 +18,9 @@ module Queries
         handle_id: String,
         date:      Int64,
         from_me:   Bool,
+        name:      String?,
+        path:      String?,
+        bytes:     Int32?,
       }
     end
 
@@ -26,6 +31,9 @@ module Queries
         H.id
         M.date
         M.is_from_me
+        A.transfer_name
+        A.filename
+        A.total_bytes
       ]
     end
 
@@ -36,10 +44,10 @@ module Queries
     private def from_clause
       "FROM message M " \
       "JOIN chat_message_join CMJ " \
-      "ON CMJ.chat_id=? " \
-      "AND M.ROWID=CMJ.message_id " \
-      "JOIN handle H " \
-      "ON M.handle_id = H.ROWID"
+      "ON CMJ.chat_id=? AND M.ROWID=CMJ.message_id " \
+      "JOIN handle H ON M.handle_id = H.ROWID " \
+      "LEFT JOIN message_attachment_join MAJ ON MAJ.message_id  = M.ROWID " \
+      "LEFT JOIN attachment A ON MAJ.attachment_id = A.ROWID"
     end
 
     private def order_by_clause

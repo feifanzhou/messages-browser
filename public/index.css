@@ -128,3 +128,15 @@ html, body, .container {
   padding: 0.2rem 0.8rem;
   position: relative;
 }
+
+.message-attachment {
+  background-color: #eee;
+  border: 1px solid #ccc;
+  border-radius: 0.5em;
+  color: #38a3f7;
+  display: inline-block;
+  font-size: 0.9em;
+  margin-right: 0.5em;
+  padding: 0.4em;
+  text-decoration: none;
+}
