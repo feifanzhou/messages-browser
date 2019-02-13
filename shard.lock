@@ -2,11 +2,11 @@ version: 1.0
 shards:
   db:
     github: crystal-lang/crystal-db
-    version: 0.5.0
+    version: 0.5.1
 
   kemal:
     github: kemalcr/kemal
-    version: 0.22.0
+    version: 0.23.0
 
   kilt:
     github: jeromegn/kilt
@@ -14,9 +14,9 @@ shards:
 
   radix:
     github: luislavena/radix
-    version: 0.3.8
+    version: 0.3.9
 
   sqlite3:
     github: crystal-lang/crystal-sqlite3
-    version: 0.9.0
+    version: 0.10.0
 

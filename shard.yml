@@ -8,12 +8,13 @@ targets:
   messages_browser:
     main: src/messages_browser.cr
 
-crystal: 0.24.1
+crystal: 0.25.1
 
 license: MIT
 
 dependencies:
   kemal:
     github: kemalcr/kemal
+    version: 0.23.0
   sqlite3:
     github: crystal-lang/crystal-sqlite3
