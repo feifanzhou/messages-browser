@@ -1,22 +1,15 @@
-# messages_browser
+Tested with Crystal 0.25.1 on macOS 10.14
 
-TODO: Write a description here
+# Running this project
 
-## Installation
+1. Ensure your Terminal has [Full Disk Access](http://osxdaily.com/2018/10/09/fix-operation-not-permitted-terminal-error-macos/), since this app will try to open system files.
+2. Run `crystal run src/app.cr`.
 
-TODO: Write installation instructions here
-
-## Usage
-
-TODO: Write usage instructions here
-
-## Development
-
-TODO: Write development instructions here
+If you run into a `ld: library not found for -lssl` error while compiling, [try this](https://github.com/brianmario/mysql2/issues/795#issuecomment-337006164)
 
 ## Contributing
 
-1. Fork it ( https://github.com/[your-github-name]/messages_browser/fork )
+1. Fork it ( https://github.com/feifanzhou/messages_browser/fork )
 2. Create your feature branch (git checkout -b my-new-feature)
 3. Commit your changes (git commit -am 'Add some feature')
 4. Push to the branch (git push origin my-new-feature)
@@ -24,4 +17,4 @@ TODO: Write development instructions here
 
 ## Contributors
 
-- [[your-github-name]](https://github.com/[your-github-name]) Feifan Zhou - creator, maintainer
+- [feifanzhou](https://github.com/feifanzhou) Feifan Zhou - creator, maintainer
