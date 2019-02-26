@@ -8,7 +8,7 @@
   </ol>
 </div>
 <div class="messages">
-  <% last_time = Time.epoch(0) %>
+  <% last_time = Time.unix(0) %>
   <% messages.each do |message| %>
     <% msg_time = message.local_time %>
     <% day_gap = msg_time.day != last_time.day %>

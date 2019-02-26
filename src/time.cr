@@ -8,6 +8,6 @@ struct Time
   end
 
   def self.from_mac_seconds(timestamp : Int64)
-    epoch(MAC_EPOCH + timestamp)
+    unix(MAC_EPOCH + timestamp)
   end
 end
