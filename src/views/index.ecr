@@ -2,7 +2,7 @@
   <ol class="chats-list">
     <% chats.each do |chat| %>
       <li>
-        <a href="/chat/<%= chat.row_id %>"><%= chat.id %></a>
+        <a href="/chat/<%= chat.row_id %>"><%= chat.display_name %></a>
       </li>
     <% end %>
   </ol>
