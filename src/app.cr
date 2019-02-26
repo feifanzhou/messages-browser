@@ -19,4 +19,6 @@ get "/chat/:chat_id" do |env|
   render "src/views/messages.ecr", "src/views/layout.ecr"
 end
 
-Kemal.run
+Kemal.run do |config|
+  config.port = ENV["PORT"].to_i || 3000
+end
