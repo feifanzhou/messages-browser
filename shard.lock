@@ -2,7 +2,7 @@ version: 1.0
 shards:
   db:
     github: crystal-lang/crystal-db
-    version: 0.5.1
+    version: 0.7.0
 
   exception_page:
     github: crystal-loot/exception_page
@@ -22,5 +22,5 @@ shards:
 
   sqlite3:
     github: crystal-lang/crystal-sqlite3
-    version: 0.10.0
+    version: 0.14.0
 

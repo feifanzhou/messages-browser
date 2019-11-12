@@ -20,5 +20,5 @@ get "/chat/:chat_id" do |env|
 end
 
 Kemal.run do |config|
-  config.port = ENV["PORT"].to_i || 3000
+  config.port = ENV.fetch("PORT", "3000").to_i
 end
