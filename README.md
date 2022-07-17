@@ -1,4 +1,4 @@
-Tested with Crystal 0.31.1 on macOS 10.14.5
+Tested with Crystal 1.5.0 on macOS 12.4
 
 # Running this project
 
