@@ -17,4 +17,4 @@ If you run into a `ld: library not found for -lssl` error while compiling, [try 
 
 ## Contributors
 
-- [feifanzhou](https://github.com/feifanzhou) Feifan Zhou - creator, maintainer
+- [feifanzhou](https://github.com/feifanzhou) Feifan Zhou - creator, maintainer (now working on [Tanagram](https://tanagram.ai))
